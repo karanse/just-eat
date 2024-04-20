@@ -1,24 +1,17 @@
-# README
+Rails app generated with [Ruby on Rails](https://rubyonrails.org/), created by the [karanse](https://github.com/karanse).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Project Title
 
-Things you may want to cover:
+This is a project which is done for Just Eat Takeaway take home assignment during Early Careers - Software Developer interview process.
 
-* Ruby version
+## Installation
 
-* System dependencies
+Describe the installation process here.
 
-* Configuration
+## Usage
 
-* Database creation
+Explain how to use your project.
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
