@@ -60,5 +60,10 @@ group :development do
   # gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
-end
 
+  gem "bootstrap", "~> 5.2"
+  gem "autoprefixer-rails"
+  gem "font-awesome-sass", "~> 6.1"
+  gem "simple_form"
+  gem "sassc-rails"
+end
