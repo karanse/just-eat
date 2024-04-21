@@ -60,6 +60,7 @@ group :development do
   # gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+end
 
   gem "bootstrap", "~> 5.2"
   gem "autoprefixer-rails"
@@ -68,4 +69,3 @@ group :development do
   gem "sassc-rails"
   gem "json"
   gem "open-uri"
-end
