@@ -76,7 +76,8 @@ begin
       street_name: restaurant['address']['firstLine'],
       postal_code: restaurant['address']['postalCode'],
       address: "#{restaurant['address']['firstLine']}, #{restaurant['address']['postalCode']}, #{restaurant['address']['city']}",
-      cuisines: restaurant['cuisines'][0]['name']
+      cuisines: restaurant['cuisines'][0]['name'],
+      logo_url: restaurant['logoUrl']
     )
     if new_restaurant.valid?
       new_restaurant.save
