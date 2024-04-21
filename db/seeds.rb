@@ -70,8 +70,8 @@ begin
     puts "Processing restaurant: #{restaurant['name']}"
     new_restaurant = Restaurant.new(
       name: restaurant['name'],
-      rating: restaurant['rating']['user_rating'],
-      rating_count: restaurant['rating']['count'],
+      rating: restaurant['rating']['user_rating'].to_f,
+      rating_count: restaurant['rating']['count'].to_i,
       city: restaurant['address']['city'],
       street_name: restaurant['address']['firstLine'],
       postal_code: restaurant['address']['postalCode'],

@@ -1,2 +1,12 @@
 <h1 class="pb-2">Search your restaurant in UK</h1>
 <p class="pb-1">Your <strong>favourite restaurant</strong> is just one click away.</p>
+
+<div class="px-4 ">
+  <%# restaurants list  %>
+  <h3 class="pt-5 text-center pb-4">Restaurants</h3>
+  <div class="list-card-container">
+    <% @restaurants.first(15).each do |restaurant| %>
+      <%= render "shared/list-card", restaurant: restaurant %>
+    <% end %>
+  </div>
+</div>
