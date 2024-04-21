@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%# navbar %>
+    <%= render "shared/navbar" %>
+    <%# body  %>
+    <div class=" container mt-5">
+      <%= yield %>
+    </div>
+    <%# add footer %>
+    <%= render "shared/footer" %>
+
   </body>
 </html>
