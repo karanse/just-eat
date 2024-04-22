@@ -3,8 +3,7 @@
     <div class="list-card-info">
       <div>
         <h5><strong><%= restaurant.name.capitalize %></strong></h5>
-        <p class="list-card-pricing"> <%= restaurant.rating.nil? ? "0.0" : "⭐️" *restaurant.rating%><i class="fa-solid fa-star"></i></p>
-
+        <p class="list-card-rating"> <%= restaurant.rating.nil? ? "0.0" : "⭐️" *restaurant.rating%></i></p>
         <p><%= restaurant.city %></p>
         <p><%= restaurant.cuisines %></p>
       </div>

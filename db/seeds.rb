@@ -16,9 +16,9 @@ Restaurant.destroy_all
 
 puts 'Creating restaurants'
 
-postcodes = ['CT12EH', 'BS1 4DJ', 'L4 0TH', 'NE9 7TY', 'SW1A 1AA', 'CF11 8AZ', 'M16 0RA',
-             'EH1 1RE', 'BN1 1AE', 'CB7 4DL', 'LS2 7HY', 'G3 8AG', 'PL4 0DW', 'B26 3QJ', 'DH4 5QZ', 'BT7 1NN']
-postcode = postcodes[0]
+postcodes = ['CT12EH', 'BS14DJ', 'L40TH', 'NE97TY', 'SW1A1AA', 'CF118AZ', 'M160RA',
+             'EH11RE', 'BN11AE', 'CB7 4DL', 'LS2 7HY', 'G3 8AG', 'PL4 0DW', 'B26 3QJ', 'DH4 5QZ', 'BT7 1NN']
+postcode = postcodes[5]
 url = "https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/#{postcode}"
 begin
   data_serialized = URI.open(url).read
@@ -38,7 +38,9 @@ begin
       address: "#{restaurant['address']['firstLine']}, #{restaurant['address']['postalCode']}, #{restaurant['address']['city']}",
       cuisines: restaurant['cuisines'][0]['name'],
       # cuisine_tags: restaurant['cuisines'].map { |cuisine| cuisine['name'] }.join(", "),
-      logo_url: restaurant['logoUrl']
+      logo_url: restaurant['logoUrl'],
+      latitude: restaurant['address']['location']['coordinates'][1],
+      longitude: restaurant['address']['location']['coordinates'][0]
     )
     if new_restaurant.valid?
       new_restaurant.save
