@@ -1,11 +1,13 @@
   <div class="list-card">
-    <div class="img" style="background-image: url(<%=restaurant.logo_url %>)"> </div>
+    <img src= "<%=restaurant.logo_url %>" class="avatar-large" alt="restaurant">
     <div class="list-card-info">
       <div>
-        <p> <%= restaurant.name.capitalize %> </p>
+        <h5><strong><%= restaurant.name.capitalize %></strong></h5>
+        <p class="list-card-pricing"> <%= restaurant.rating.nil? ? "0.0" : "⭐️" *restaurant.rating%><i class="fa-solid fa-star"></i></p>
+
+        <p><%= restaurant.city %></p>
+        <p><%= restaurant.cuisines %></p>
       </div>
-      <h2 class="list-card-pricing"> <%= restaurant.rating.nil? ? "0" : restaurant.rating%></h2>
-      <p><%= restaurant.city %></p>
-      <p><%= restaurant.cuisines %></p>
+
     </div>
   </div>
