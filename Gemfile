@@ -71,3 +71,4 @@ end
   gem "sassc-rails"
   gem "json"
   gem "open-uri"
+  gem "dotenv-rails"
