@@ -50,7 +50,7 @@ Before running the application, ensure you have the following software installed
 6. Open your web browser and navigate to`http://localhost:3000` to view the application.
 
 ## Usage
-- The app is also running on Production, deployed on Heroku, you can check it out [here](https://justeat-27a1c970ee01.herokuapp.com/)
+- The app is also **running on Production, deployed on Heroku**, you can check it out [here](https://justeat-27a1c970ee01.herokuapp.com/)
 - The app includes seed data from given UK area postal codes, but you can search **any valid area postal code in UK** and it'll display the first 10 restaurants provided by the API. You can click on the markers on the map to  see restaurant details.
 
 
@@ -59,10 +59,10 @@ Before running the application, ensure you have the following software installed
 
 
 ## Potential Improvements
-- Code organized can be improved maintainability and readability.
+- Code organization can be improved maintainability and readability.
 - Implement basic error handling to provide informative error messages to users when something goes wrong.
 - Improve the UI with better styling and additional features to improve usability.
-- Improving accessibility features to ensure that the application is accessible to users with disabilities by adding alt attributes to images, using semantic HTML elements, and testing with screen readers. Check for color contrast and keyboard navigation.
+- Improve accessibility features to ensure that the application is accessible to users with disabilities by adding alt attributes to images, using semantic HTML elements, and testing with screen readers. Check for color contrast and keyboard navigation.
 - Implement basic tests for the  application using Rails' built-in testing framework (e.g., MiniTest or RSpec) by beginning with simple unit tests for your models and controllers to verify basic functionality.
 - Develop a Show Page to display additional data for each restaurant, which can be linked via restaurant card or markers on the map.
 
