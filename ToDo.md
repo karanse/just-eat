@@ -9,10 +9,10 @@
 - [x] Get the logo link to add list card
 ### Frontend Design
 - [x] Add navbar - My lists and My bookmarks sections
-- [ ] Add search bar - search by postcode, cuisine
-- [ ] Add Map with mapbox and mark the restaurants by given search
-- [ ] Re-design list-card - show restaurant data
-- [ ] Improve seed.rb to bring all restaurant cuisines info
+- [x] Add search bar - search by postcode, cuisine
+- [x] Add Map with mapbox and mark the restaurants by given search
+- [x] Re-design list-card - show restaurant data
+- [x] Improve seed.rb to bring all restaurant cuisines info
 - [ ] [Optional] Bring a popup card about the restaurant details and restaurant logo
 - [ ] [Optional]card will have option to add bookmark only - for this project
 
