@@ -3,7 +3,22 @@
     <div class="list-card-info">
       <div>
         <h5><strong><%= restaurant.name.capitalize %></strong></h5>
-        <p class="list-card-rating"> <%= restaurant.rating.nil? ? "0.0" : "⭐️" *restaurant.rating%></i></p>
+        <p class="list-card-rating">
+          <% if restaurant.rating.nil? %>
+            <% 5.times do %>
+              <i class="fa-regular fa-star" style="color: #fc704f;"></i>
+            <% end %>
+          <% else %>
+            <% filled_stars = restaurant.rating.ceil %>
+            <% empty_stars = 5 - filled_stars %>
+            <% filled_stars.times do %>
+              <i class="fa-solid fa-star" style="color: #fc7c04;"></i>
+            <% end %>
+            <% empty_stars.times do %>
+              <i class="fa-regular fa-star" style="color: #fc7c04;"></i>
+            <% end %>
+          <% end %>
+      </p>
         <p><%= restaurant.city%><%= restaurant.postal_code %></p>
         <p><%= restaurant.cuisines %></p>
       </div>

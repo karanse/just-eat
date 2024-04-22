@@ -2,12 +2,12 @@ class RestaurantsController < ApplicationController
   def index
     # check if user searched an area post code
     if params[:query].present?
-      postcode = params[:query]
+      postcode = params[:query].upcase
       # check if searched postcode restaurants in DB, else fetch & add them to the DB
       if need_to_fetch_restaurants?(postcode)
         fetch_and_save_restaurants(postcode)
       end
-      @restaurants = Restaurant.where(search_postal_code: params[:query]).order(rating: :desc).limit(12)
+      @restaurants = Restaurant.where(search_postal_code: postcode).order(rating: :desc).limit(12)
     else
       @restaurants = Restaurant.first(12)
     end
