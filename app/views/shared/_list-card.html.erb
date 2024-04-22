@@ -2,7 +2,7 @@
     <img src= "<%=restaurant.logo_url %>" class="avatar-large" alt="restaurant">
     <div class="list-card-info">
       <div>
-        <h5><strong><%= restaurant.name.capitalize %></strong></h5>
+        <h4><strong><%= restaurant.name.capitalize %></strong></h4>
         <p class="list-card-rating">
           <% if restaurant.rating.nil? %>
             <% 5.times do %>
@@ -18,8 +18,11 @@
               <i class="fa-regular fa-star" style="color: #fc7c04;"></i>
             <% end %>
           <% end %>
-      </p>
-        <p><%= restaurant.city%><%= restaurant.postal_code %></p>
+          <small><%= restaurant.rating_count%> reviews</small>
+        </p>
+        <br>
+        <p><i><%= restaurant.address%></i></p>
+        <br>
         <p><%= restaurant.cuisines %></p>
       </div>
 

@@ -49,7 +49,7 @@ class RestaurantsController < ApplicationController
           search_postal_code: postcode,
           postal_code: restaurant['address']['postalCode'],
           address: "#{restaurant['address']['firstLine']}, #{restaurant['address']['postalCode']}, #{restaurant['address']['city']}",
-          cuisines: restaurant['cuisines'][0]['name'],
+          cuisines: restaurant['cuisines'].map {|cuisine| cuisine['name']}.join(", "),
           logo_url: restaurant['logoUrl'],
           latitude: restaurant['address']['location']['coordinates'][1],
           longitude: restaurant['address']['location']['coordinates'][0]
