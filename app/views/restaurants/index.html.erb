@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-between align-items-start">
 <%# restaurants list  %>
   <div class="list-card-container list-index">
-      <% @restaurants.first(10).each do |restaurant| %>
+      <% @restaurants.each do |restaurant| %>
       <%= render "shared/list-card", restaurant: restaurant %>
     <% end %>
   </div>

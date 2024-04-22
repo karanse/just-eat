@@ -4,7 +4,7 @@
       <div>
         <h5><strong><%= restaurant.name.capitalize %></strong></h5>
         <p class="list-card-rating"> <%= restaurant.rating.nil? ? "0.0" : "⭐️" *restaurant.rating%></i></p>
-        <p><%= restaurant.city %></p>
+        <p><%= restaurant.city%><%= restaurant.postal_code %></p>
         <p><%= restaurant.cuisines %></p>
       </div>
 

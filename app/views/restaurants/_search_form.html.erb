@@ -1,21 +1,10 @@
 <div class = "searchbar px-4">
-  <%= form_with url: root_path, method: :get do |form| %>
-    <div class="d-flex justify-content-between align-items-center">
-        <%= form.label :query, "City:" %>
-
-         <%= text_field_tag :query,
+  <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
             params[:query],
-            class: "form-control my-3 mr-2 search-first-row",
-            placeholder: "City or country"
-          %>
-
-        <%= form.label :who, "Postal code:" %>
-        <%= form.text_field :who, class:"form-control search-first-row my3" %>
-    </div>
-    <div class="d-flex justify-content-between align-items-center" id="dates">
-    </div>
-    <div>
-    <%= form.submit "Search", class:"btn btn-primary mb-5" %>
-    </div>
-  <% end %>
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
 </div>
